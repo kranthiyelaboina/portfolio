@@ -550,15 +550,10 @@ const Personal = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <div className="min-h-[25dvh] sm:h-[30dvh] place-content-center px-4">
-              {/* Mobile version - just show Bablu without animation */}
-              <h1 className="sm:hidden text-3xl font-semibold max-w-7xl mx-auto text-center mt-4 relative z-20 py-4 bg-clip-text text-transparent bg-gradient-to-b from-neutral-400 to-white leading-relaxed">
-                Hello again? <br />
-                My nickname is <span className="text-accent font-bold">Bablu</span>
-              </h1>
-              {/* Desktop version - with Cover animation */}
-              <h1 className="hidden sm:block text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-semibold max-w-7xl mx-auto text-center mt-6 relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-400 to-white leading-relaxed">
-                Hello again? <br />
-                My nickname is <Cover>Bablu</Cover>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-semibold max-w-7xl mx-auto text-center mt-4 sm:mt-6 relative z-20 py-4 sm:py-6 leading-relaxed">
+                <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-400 to-white">Hello again?</span> <br />
+                <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-400 to-white">My nickname is </span>
+                <Cover>Bablu</Cover>
               </h1>
             </div>
 

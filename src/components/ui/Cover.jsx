@@ -80,10 +80,10 @@ export const Cover = ({ children, className = "" }) => {
 
       {/* Text content */}
       <motion.span
-        className="relative z-20 inline-block"
+        className="relative z-20 inline-block text-accent"
         animate={{
           scale: isHovered ? 1.1 : 1,
-          color: isHovered ? "#ffffff" : "inherit",
+          color: isHovered ? "#ffffff" : "#00ff99",
         }}
         transition={{ duration: 0.2 }}
       >
