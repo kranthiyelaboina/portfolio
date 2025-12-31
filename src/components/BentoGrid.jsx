@@ -21,7 +21,7 @@ const BentoGrid = () => {
       id: 1,
       title: "AWS Certified Cloud Practitioner",
       description: "",
-      className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
+      className: "lg:col-span-3 sm:col-span-2 md:col-span-6 md:row-span-4 min-h-[50vh] lg:min-h-[60vh]",
       imgSrc: awsImage,
       titleClassName: "justify-end",
       hasPixelCard: true,
@@ -68,8 +68,8 @@ const BentoGrid = () => {
   return (
     <section id="about">
       <div style={{ opacity: 1 }}>
-        <h1 className="heading pt-20">Short Profile</h1>
-        <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 md:grid-row-7 gap-4 lg:gap-8 mx-auto w-full py-20">
+        <h1 className="heading pt-12 sm:pt-20 px-4">Short Profile</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 lg:grid-cols-5 md:grid-row-7 gap-4 lg:gap-8 mx-auto w-full py-10 sm:py-20 px-4 sm:px-0">
           {items.map((item) => (
             <SpotlightCard
               key={item.id}

@@ -18,11 +18,11 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="py-8 xl:py-12 text-white">
+    <header className="py-4 sm:py-8 xl:py-12 text-white">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link to="/">
-          <h1 className="text-4xl font-semibold">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
             Kranthi <span className="text-accent">.</span>
           </h1>
         </Link>

@@ -549,50 +549,50 @@ const Personal = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <div className="h-[30dvh] place-content-center">
-              <h1 className="text-4xl md:text-4xl lg:text-7xl font-semibold max-w-7xl mx-auto text-center mt-6 relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-400 to-white">
+            <div className="min-h-[25dvh] sm:h-[30dvh] place-content-center px-4">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-semibold max-w-7xl mx-auto text-center mt-4 sm:mt-6 relative z-20 py-4 sm:py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-400 to-white leading-relaxed">
                 Hello again? <br />
                 My nickname is <Cover>Bablu</Cover>
               </h1>
             </div>
 
             {/* Flip Words Section */}
-            <div className="h-auto min-h-[12rem] max-h-[20rem] flex justify-center items-center px-4 py-8">
-              <div className="text-2xl sm:text-3xl lg:text-4xl mx-auto font-normal text-neutral-400 text-center">
+            <div className="h-auto min-h-[8rem] sm:min-h-[12rem] max-h-[20rem] flex justify-center items-center px-4 py-6 sm:py-8">
+              <div className="text-lg sm:text-2xl md:text-3xl lg:text-4xl mx-auto font-normal text-neutral-400 text-center">
                 I'm <br className="lg:hidden block" />
                 <FlipWords words={personalities} />
                 <br />
-                <span className="hidden lg:block">Took me about 72+ hours to Build it.</span>
+                <span className="hidden sm:block text-sm sm:text-base md:text-lg">Took me about 72+ hours to Build it.</span>
               </div>
             </div>
           </motion.div>
 
           {/* Hobbies Section */}
           <motion.div
-            className="relative z-20 py-10 lg:py-40 max-w-7xl mx-auto"
+            className="relative z-20 py-8 sm:py-10 lg:py-40 max-w-7xl mx-auto"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="px-8">
-              <h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-white">
+            <div className="px-4 sm:px-8">
+              <h4 className="text-2xl sm:text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-white">
                 My Hobbies
               </h4>
-              <p className="text-sm lg:text-base max-w-2xl my-4 mx-auto text-center font-normal text-neutral-300">
+              <p className="text-xs sm:text-sm lg:text-base max-w-2xl my-4 mx-auto text-center font-normal text-neutral-300">
                 I like to stay active. New hobbies are added almost every year.
               </p>
             </div>
 
             {/* Hobbies Grid - Exact match to HTML */}
             <div className="relative">
-              <div className="grid grid-cols-1 lg:grid-cols-6 mt-12 xl:border rounded-md border-neutral-800">
+              <div className="grid grid-cols-1 lg:grid-cols-6 mt-8 sm:mt-12 xl:border rounded-md border-neutral-800">
                 
                 {/* Morning Run - Large card */}
-                <div className="p-4 sm:p-8 h-[350px] lg:h-[calc(100vh-400px)] lg:max-h-[600px] relative overflow-hidden col-span-1 lg:col-span-4 border-b lg:border-r border-neutral-800">
-                  <p className="max-w-5xl mx-auto text-left tracking-tight text-white text-xl md:text-2xl md:leading-snug">
+                <div className="p-4 sm:p-8 h-[280px] sm:h-[350px] lg:h-[calc(100vh-400px)] lg:max-h-[600px] relative overflow-hidden col-span-1 lg:col-span-4 border-b lg:border-r border-neutral-800">
+                  <p className="max-w-5xl mx-auto text-left tracking-tight text-white text-lg sm:text-xl md:text-2xl md:leading-snug">
                     Morning Run
                   </p>
-                  <p className="text-sm font-normal text-neutral-300 text-left max-w-sm mx-0 md:text-sm my-2">
+                  <p className="text-xs sm:text-sm font-normal text-neutral-300 text-left max-w-sm mx-0 md:text-sm my-2">
                     There's something special about running in the morning. It makes me feel truly peaceful (⊗`◟´⊗). I also enjoy playing chess and staying mentally active (〜￣▽￣)〜
                   </p>
                   <div className="h-full w-full">
@@ -613,11 +613,11 @@ const Personal = () => {
                 </div>
 
                 {/* Enjoyer of good books */}
-                <div className="p-4 sm:p-8 h-[350px] lg:h-[calc(100vh-400px)] lg:max-h-[600px] relative overflow-hidden border-b col-span-1 lg:col-span-2 border-neutral-800">
-                  <p className="max-w-5xl mx-auto text-left tracking-tight text-white text-xl md:text-2xl md:leading-snug">
+                <div className="p-4 sm:p-8 h-[280px] sm:h-[350px] lg:h-[calc(100vh-400px)] lg:max-h-[600px] relative overflow-hidden border-b col-span-1 lg:col-span-2 border-neutral-800">
+                  <p className="max-w-5xl mx-auto text-left tracking-tight text-white text-lg sm:text-xl md:text-2xl md:leading-snug">
                     Enjoyer of good books
                   </p>
-                  <p className="text-sm font-normal text-neutral-300 text-left max-w-sm mx-0 md:text-sm my-2">
+                  <p className="text-xs sm:text-sm font-normal text-neutral-300 text-left max-w-sm mx-0 md:text-sm my-2">
                     I enjoy many pastimes, from video games to movies and music, but reading novels is how I spend most of my time lately.
                   </p>
                   <div className="h-full w-full">
@@ -626,11 +626,11 @@ const Personal = () => {
                 </div>
 
                 {/* Music Enthusiast - with YouTube link and singing.png */}
-                <div className="p-4 sm:p-8 h-[350px] lg:h-[calc(100vh-400px)] lg:max-h-[600px] relative overflow-hidden col-span-1 lg:col-span-3 lg:border-r border-neutral-800">
-                  <p className="max-w-5xl mx-auto text-left tracking-tight text-white text-xl md:text-2xl md:leading-snug">
+                <div className="p-4 sm:p-8 h-[280px] sm:h-[350px] lg:h-[calc(100vh-400px)] lg:max-h-[600px] relative overflow-hidden col-span-1 lg:col-span-3 lg:border-r border-neutral-800">
+                  <p className="max-w-5xl mx-auto text-left tracking-tight text-white text-lg sm:text-xl md:text-2xl md:leading-snug">
                     Music Enthusiast
                   </p>
-                  <p className="text-sm font-normal text-neutral-300 text-left max-w-sm mx-0 md:text-sm my-2">
+                  <p className="text-xs sm:text-sm font-normal text-neutral-300 text-left max-w-sm mx-0 md:text-sm my-2">
                     I love singing songs and sharing my music online (❁´◡`❁).
                   </p>
                   <div className="h-full w-full">
@@ -655,16 +655,16 @@ const Personal = () => {
                 </div>
 
                 {/* Dream of Becoming a Polyglot - with 3D Globe */}
-                <div className="p-4 sm:p-8 h-[350px] lg:h-[calc(100vh-400px)] lg:max-h-[600px] relative overflow-hidden col-span-1 lg:col-span-3 border-b border-neutral-800">
-                  <p className="max-w-5xl mx-auto text-left tracking-tight text-white text-xl md:text-2xl md:leading-snug">
+                <div className="p-4 sm:p-8 h-[280px] sm:h-[350px] lg:h-[calc(100vh-400px)] lg:max-h-[600px] relative overflow-hidden col-span-1 lg:col-span-3 border-b border-neutral-800">
+                  <p className="max-w-5xl mx-auto text-left tracking-tight text-white text-lg sm:text-xl md:text-2xl md:leading-snug">
                     Dream of Becoming a Polyglot
                   </p>
-                  <p className="text-sm font-normal text-neutral-300 text-left max-w-sm mx-0 md:text-sm my-2">
-                    Currently learning new languages and planning to study more in the future. No specific goal yet []~(￣▽￣)~*
+                  <p className="text-xs sm:text-sm font-normal text-neutral-300 text-left max-w-sm mx-0 md:text-sm my-2">
+                    Currently learning new languages and planning to study more in the future. No specific goal yet []﹏(￣▽￣)﹏*
                   </p>
-                  <div className="h-full w-full mt-4">
+                  <div className="h-full w-full mt-2 sm:mt-4">
                     <GlobeContainer />
-                    <p className="text-neutral-400 mt-4 text-center text-sm">Languages are bridges to new worlds</p>
+                    <p className="text-neutral-400 mt-2 sm:mt-4 text-center text-xs sm:text-sm">Languages are bridges to new worlds</p>
                   </div>
                 </div>
               </div>
@@ -678,7 +678,7 @@ const Personal = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="pl-4 mx-auto text-xl md:text-5xl font-bold text-neutral-200">
+            <h2 className="pl-4 mx-auto text-lg sm:text-xl md:text-3xl lg:text-5xl font-bold text-neutral-200">
               Components of Bablu's Life
             </h2>
             <Carousel items={carouselItems} />
@@ -686,7 +686,7 @@ const Personal = () => {
 
           {/* Stats Section with Grid Background */}
           <motion.div
-            className="flex relative mt-20 flex-col gap-4 p-4"
+            className="flex relative mt-10 sm:mt-20 flex-col gap-4 p-4"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5 }}

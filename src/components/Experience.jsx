@@ -16,11 +16,11 @@ const Experience = () => {
   ];
 
   return (
-    <div className="py-20 w-full">
-      <h1 className="heading">
+    <div className="py-12 sm:py-20 w-full px-4 sm:px-0">
+      <h1 className="heading px-4">
         My <span className="text-accent">experience</span>
       </h1>
-      <div className="w-full mt-12 grid lg:grid-cols-2 grid-cols-1 gap-10 max-w-4xl mx-auto">
+      <div className="w-full mt-8 sm:mt-12 grid lg:grid-cols-2 grid-cols-1 gap-6 sm:gap-10 max-w-4xl mx-auto">
         {experiences.map((experience, index) => (
           <div
             key={index}
@@ -45,7 +45,7 @@ const Experience = () => {
                 
                 {/* Card content */}
                 <div
-                  className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2 rounded-3xl"
+                  className="flex lg:flex-row flex-col lg:items-center p-3 py-4 sm:py-6 md:p-5 lg:p-10 gap-2 rounded-3xl"
                   style={{ backgroundColor: '#13162d' }}
                 >
                   <img
@@ -54,15 +54,15 @@ const Experience = () => {
                     width="128"
                     height="128"
                     decoding="async"
-                    className="lg:w-32 md:w-20 w-16"
+                    className="lg:w-32 md:w-20 w-12 sm:w-16"
                     src={experience.thumbnail}
                     style={{ color: 'transparent' }}
                   />
                   <div className="lg:ms-5">
-                    <h1 className="text-start text-xl md:text-2xl font-bold">
+                    <h1 className="text-start text-lg sm:text-xl md:text-2xl font-bold">
                       {experience.title}
                     </h1>
-                    <p className="text-start text-white/60 mt-3 font-semibold">
+                    <p className="text-start text-white/60 mt-2 sm:mt-3 font-semibold text-sm sm:text-base">
                       {experience.description}
                     </p>
                   </div>

@@ -12,21 +12,21 @@ const Timeline = ({ data }) => {
   const heightTransform = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <div className="w-full py-20" ref={containerRef}>
+    <div className="w-full py-10 sm:py-20" ref={containerRef}>
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-10">
-        <h2 className="text-3xl md:text-5xl font-bold text-center mb-4 text-white">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center mb-3 sm:mb-4 text-white">
           My <span className="text-accent">Achievements</span>
         </h2>
-        <p className="text-neutral-400 text-center max-w-2xl mx-auto mb-16">
+        <p className="text-neutral-400 text-center max-w-2xl mx-auto mb-8 sm:mb-16 text-sm sm:text-base">
           A timeline of my academic and professional milestones
         </p>
       </div>
 
-      <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
+      <div ref={ref} className="relative max-w-7xl mx-auto pb-10 sm:pb-20">
         {data.map((item, index) => (
           <div
             key={index}
-            className="flex justify-start pt-10 md:pt-40 md:gap-10"
+            className="flex justify-start pt-6 sm:pt-10 md:pt-40 md:gap-10"
           >
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-black flex items-center justify-center">
@@ -37,8 +37,8 @@ const Timeline = ({ data }) => {
               </h3>
             </div>
 
-            <div className="relative pl-20 pr-4 md:pl-4 w-full">
-              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500">
+            <div className="relative pl-16 sm:pl-20 pr-4 md:pl-4 w-full">
+              <h3 className="md:hidden block text-xl sm:text-2xl mb-3 sm:mb-4 text-left font-bold text-neutral-500">
                 {item.title}
               </h3>
               <motion.div

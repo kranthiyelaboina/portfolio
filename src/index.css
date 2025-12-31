@@ -43,19 +43,19 @@
 @layer components {
   /* Typography Classes */
   .h1 {
-    @apply text-4xl font-bold xl:text-[80px] xl:leading-[90px];
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[80px] font-bold leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-[90px];
   }
 
   .h2 {
-    @apply text-3xl font-bold xl:text-[48px] xl:leading-[56px];
+    @apply text-2xl sm:text-3xl md:text-4xl xl:text-[48px] font-bold leading-tight xl:leading-[56px];
   }
 
   .h3 {
-    @apply text-xl font-bold xl:text-[24px];
+    @apply text-lg sm:text-xl font-bold xl:text-[24px];
   }
 
   .heading {
-    @apply text-center font-bold text-3xl md:text-5xl;
+    @apply text-center font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
   }
 
   /* Outline Text */

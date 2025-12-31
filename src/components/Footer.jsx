@@ -10,23 +10,23 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="w-full pt-20 pb-10 relative" id="contact">
+    <footer className="w-full pt-12 sm:pt-20 pb-6 sm:pb-10 relative px-4 sm:px-0" id="contact">
       {/* Background grid image */}
       <div className="w-full absolute left-0 -bottom-72 min-h-96">
         <img
           alt="grid"
           loading="lazy"
           className="w-full h-full opacity-50"
-          src="/src/assets/Professional _ Radnaabazar Bulgan_files/footer-grid.svg"
+          src="/personal/footer-grid.svg"
           style={{ color: 'transparent' }}
         />
       </div>
 
       <div className="flex flex-col items-center relative z-10">
-        <h1 className="heading lg:max-w-[45vw]">
+        <h1 className="heading lg:max-w-[45vw] px-4">
           Let's <span className="text-accent">connect</span> and build something amazing together!
         </h1>
-        <p className="text-white/60 md:mt-10 my-5 text-center">
+        <p className="text-white/60 md:mt-10 my-4 sm:my-5 text-center text-sm sm:text-base px-4">
           I'm eager to learn, collaborate, and contribute to exciting projects. Feel free to reach out!
         </p>
         <a href="mailto:kranthiyelaboinahere@gmail.com">
@@ -38,8 +38,8 @@ const Footer = () => {
         </a>
       </div>
 
-      <div className="flex mt-16 md:flex-row flex-col justify-between items-center relative z-10">
-        <p className="md:text-base text-sm md:font-normal font-light">
+      <div className="flex mt-10 sm:mt-16 md:flex-row flex-col justify-between items-center gap-4 md:gap-0 relative z-10">
+        <p className="text-xs sm:text-sm md:text-base md:font-normal font-light text-center md:text-left">
           Copyright © 2024 Kranthi Yelaboina
         </p>
         <div className="flex items-center md:gap-3 gap-6">

@@ -46,14 +46,14 @@ const Hero = () => {
     <div className="container mx-auto h-full">
       <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
         {/* Text Content */}
-        <div className="text-center xl:text-left order-2 xl:order-none">
+        <div className="text-center xl:text-left order-2 xl:order-none px-4 sm:px-0">
           <div style={{ opacity: 1 }}>
-            <span className="text-xl">Full Stack Developer</span>
-            <h1 className="h1 mb-6">
+            <span className="text-base sm:text-lg md:text-xl">Full Stack Developer</span>
+            <h1 className="h1 mb-4 sm:mb-6">
               Hello I'm <br />
               <span className="text-accent relative inline-block group cursor-pointer overflow-hidden">
                 <span className="relative z-10 inline-block transition-colors duration-500 group-hover:text-primary">
-                  Kranthi <br />Yelaboina
+                  Kranthi <span className="hidden sm:inline"><br /></span><span className="sm:hidden"> </span>Yelaboina
                 </span>
                 <span
                   className="absolute inset-0 bg-accent z-0 transition-transform duration-500 ease-out scale-x-0 group-hover:scale-x-100"
@@ -61,11 +61,11 @@ const Hero = () => {
                 ></span>
               </span>
             </h1>
-            <p className="max-w-[500px] mb-9 text-white/80">
+            <p className="max-w-[500px] mb-6 sm:mb-9 text-sm sm:text-base text-white/80 px-2 sm:px-0">
               B.Tech CS Student at IARE | Programming Lead - GDG IARE | AWS CCP & Oracle Multicloud Architect Certified | From India
             </p>
 
-            <div className="flex flex-col xl:flex-row items-center gap-8">
+            <div className="flex flex-col sm:flex-row xl:flex-row items-center gap-4 sm:gap-6 xl:gap-8">
               {/* Resume Button */}
               <a 
                 href="https://limewire.com/d/cFmt6#zSitlLNkJh"
@@ -168,18 +168,18 @@ const Hero = () => {
       </div>
 
       {/* Stats Section */}
-      <section className="pt-4 pb-12 xl:pt-0 xl:pb-0">
+      <section className="pt-4 pb-8 sm:pb-12 xl:pt-0 xl:pb-0 px-4 sm:px-0">
         <div className="container mx-auto">
-          <div className="flex flex-wrap gap-6 max-w-[100vw] md:max-w-[80vw] mx-auto xl:max-w-none">
+          <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-4 sm:gap-6 max-w-[100vw] md:max-w-[80vw] mx-auto xl:max-w-none">
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="flex-1 flex gap-4 items-center justify-center xl:justify-start"
+                className="flex-1 flex gap-2 sm:gap-4 items-center justify-center xl:justify-start min-w-[140px]"
               >
-                <div className="flex items-center gap-4" style={{ opacity: 1 }}>
-                  <div className="flex items-center gap-4" style={{ filter: 'blur(0px)', opacity: 1 }}>
-                    <span className="text-4xl xl:text-6xl font-extrabold">{stat.value}</span>
-                    <p className="max-w-[150px] leading-snug text-white/80">{stat.label}</p>
+                <div className="flex items-center gap-2 sm:gap-4" style={{ opacity: 1 }}>
+                  <div className="flex items-center gap-2 sm:gap-4" style={{ filter: 'blur(0px)', opacity: 1 }}>
+                    <span className="text-2xl sm:text-4xl xl:text-6xl font-extrabold">{stat.value}</span>
+                    <p className="max-w-[100px] sm:max-w-[150px] leading-snug text-white/80 text-xs sm:text-sm md:text-base">{stat.label}</p>
                   </div>
                 </div>
               </div>

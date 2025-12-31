@@ -23,15 +23,15 @@ const Education = () => {
   ];
 
   return (
-    <div id="education" className="mt-32 max-w-5xl mx-auto px-8" style={{ opacity: 1 }}>
-      <h1 className="heading flex items-center justify-center">
-        <FaGraduationCap className="text-accent mr-2" />
+    <div id="education" className="mt-16 sm:mt-24 md:mt-32 max-w-5xl mx-auto px-4 sm:px-8" style={{ opacity: 1 }}>
+      <h1 className="heading flex items-center justify-center gap-2">
+        <FaGraduationCap className="text-accent text-2xl sm:text-3xl md:text-4xl" />
         <div>
           <span>Education</span>
         </div>
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 py-6 sm:py-10">
         {educationData.map((edu, index) => (
           <div key={index} className="relative group block p-2 h-full w-full">
             <div className="rounded-2xl h-full w-full p-4 overflow-hidden bg-[rgb(22,22,29)] border border-white/[0.2] group-hover:border-accent/60 relative z-20">

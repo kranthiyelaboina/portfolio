@@ -37,16 +37,16 @@ const Projects = () => {
   ];
 
   return (
-    <div id="projects-section" className="py-20">
-      <h1 className="heading">
+    <div id="projects-section" className="py-12 sm:py-20">
+      <h1 className="heading px-4">
         A small selection of{' '}
         <span className="text-accent">recent projects</span>
       </h1>
-      <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
+      <div className="flex flex-wrap items-center justify-center p-4 gap-8 sm:gap-12 lg:gap-16 mt-6 sm:mt-10">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
+            className="lg:min-h-[32.5rem] h-[22rem] sm:h-[25rem] flex items-center justify-center w-[85vw] sm:w-96"
           >
             <div className="relative group/pin z-50 cursor-pointer">
               <div
@@ -59,7 +59,7 @@ const Projects = () => {
                 >
                   <div className="relative z-50">
                     {/* Project Image */}
-                    <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
+                    <div className="relative flex items-center justify-center w-[85vw] sm:w-96 overflow-hidden h-[18vh] sm:h-[20vh] lg:h-[30vh] mb-6 sm:mb-10">
                       <div
                         className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                         style={{ backgroundColor: 'rgb(19, 22, 45)' }}
@@ -86,12 +86,12 @@ const Projects = () => {
                     </p>
 
                     {/* Tech Stack and Link */}
-                    <div className="flex items-center justify-between mt-7 mb-3">
+                    <div className="flex items-center justify-between mt-4 sm:mt-7 mb-3">
                       <div className="flex items-center">
-                        {project.iconList.map((tech, idx) => (
+                        {project.iconList.slice(0, 3).map((tech, idx) => (
                           <div
                             key={idx}
-                            className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center text-xs"
+                            className="border border-white/[.2] rounded-full bg-black w-7 h-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10 flex justify-center items-center text-[10px] sm:text-xs"
                             style={{ transform: `translateX(${-idx * 5}px)` }}
                           >
                             {tech.slice(0, 2)}
@@ -104,11 +104,11 @@ const Projects = () => {
                             href={project.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex lg:text-xl md:text-xs text-sm cursor-pointer text-accent hover:text-green-200 transition-all duration-200"
+                            className="flex text-xs sm:text-sm md:text-xs lg:text-xl cursor-pointer text-accent hover:text-green-200 transition-all duration-200"
                           >
                             View Project
                           </a>
-                          <FaLocationArrow className="ms-3" color="#00ff99" />
+                          <FaLocationArrow className="ms-2 sm:ms-3 text-xs sm:text-sm" color="#00ff99" />
                         </div>
                       )}
                     </div>
