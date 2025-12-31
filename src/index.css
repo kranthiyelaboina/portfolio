@@ -1,0 +1,240 @@
+@import "@fontsource/jetbrains-mono/400.css";
+@import "@fontsource/jetbrains-mono/500.css";
+@import "@fontsource/jetbrains-mono/600.css";
+@import "@fontsource/jetbrains-mono/700.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "JetBrains Mono", monospace;
+    background: #0f0e1a;
+    color: #ffffff;
+    --first-color: 18, 113, 255;
+    --second-color: 221, 74, 255;
+    --third-color: 100, 220, 255;
+    --fourth-color: 200, 50, 50;
+    --fifth-color: 180, 180, 50;
+    --pointer-color: 140, 100, 255;
+    --size: 80%;
+    --blending-value: hard-light;
+    --gradient-background-start: rgb(108, 0, 162);
+    --gradient-background-end: rgb(0, 17, 82);
+  }
+
+  ::selection {
+    background: #00ff99;
+    color: #0f0e1a;
+  }
+}
+
+@layer components {
+  /* Typography Classes */
+  .h1 {
+    @apply text-4xl font-bold xl:text-[80px] xl:leading-[90px];
+  }
+
+  .h2 {
+    @apply text-3xl font-bold xl:text-[48px] xl:leading-[56px];
+  }
+
+  .h3 {
+    @apply text-xl font-bold xl:text-[24px];
+  }
+
+  .heading {
+    @apply text-center font-bold text-3xl md:text-5xl;
+  }
+
+  /* Outline Text */
+  .text-outline {
+    -webkit-text-stroke: 2px #00ff99;
+    color: transparent;
+  }
+
+  .text-outline-hover:hover {
+    -webkit-text-stroke: 0;
+    color: #00ff99;
+  }
+
+  /* Gradient Background */
+  .gradient-bg {
+    background: linear-gradient(40deg, var(--gradient-background-start), var(--gradient-background-end));
+    position: fixed;
+    inset: 0;
+    z-index: -10;
+  }
+
+  .gradients-container {
+    position: absolute;
+    inset: 0;
+    filter: url(#blurMe) blur(40px);
+    overflow: hidden;
+  }
+
+  .gradient-orb {
+    position: absolute;
+    mix-blend-mode: var(--blending-value);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    opacity: 0.8;
+  }
+
+  .g1 {
+    background: radial-gradient(circle at center, rgba(var(--first-color), 0.8) 0, rgba(var(--first-color), 0) 50%);
+    top: calc(50% - var(--size) / 2);
+    left: calc(50% - var(--size) / 2);
+  }
+
+  .g2 {
+    background: radial-gradient(circle at center, rgba(var(--second-color), 0.8) 0, rgba(var(--second-color), 0) 50%);
+    top: calc(50% - var(--size) / 2);
+    left: calc(50% - var(--size) / 2);
+  }
+
+  .g3 {
+    background: radial-gradient(circle at center, rgba(var(--third-color), 0.8) 0, rgba(var(--third-color), 0) 50%);
+    top: calc(50% - var(--size) / 2 + 200px);
+    left: calc(50% - var(--size) / 2 - 500px);
+  }
+
+  .g4 {
+    background: radial-gradient(circle at center, rgba(var(--fourth-color), 0.8) 0, rgba(var(--fourth-color), 0) 50%);
+    top: calc(50% - var(--size) / 2);
+    left: calc(50% - var(--size) / 2);
+  }
+
+  .g5 {
+    background: radial-gradient(circle at center, rgba(var(--fifth-color), 0.8) 0, rgba(var(--fifth-color), 0) 50%);
+    width: calc(var(--size) * 2);
+    height: calc(var(--size) * 2);
+    top: calc(50% - var(--size));
+    left: calc(50% - var(--size));
+  }
+
+  /* Pin Effect for Projects */
+  .pin-perspective {
+    perspective: 1000px;
+  }
+
+  .pin-container {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+  }
+
+  /* Glowing Border */
+  .glow-border {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  .glow-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, #00ff99, #00d4ff, #00ff99);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .glow-border:hover::before {
+    opacity: 1;
+  }
+
+  /* Rotating Circle for Hero */
+  .rotating-circle {
+    animation: rotate 10s linear infinite;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0f0e1a;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #141420;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00ff99;
+  }
+
+  /* Grid Pattern Background */
+  .bg-grid {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(255 255 255 / 0.04)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+  }
+
+  /* Spotlight Effect */
+  .spotlight {
+    position: absolute;
+    top: -40%;
+    left: -30%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(ellipse at center, rgba(0, 255, 153, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+    opacity: 0;
+    animation: spotlight 2s ease 0.75s 1 forwards;
+  }
+
+  @keyframes spotlight {
+    0% {
+      opacity: 0;
+      transform: translate(-72%, -62%) scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -40%) scale(1);
+    }
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Transition Utilities */
+  .transition-all-300 {
+    transition: all 300ms ease;
+  }
+
+  /* Clip Path */
+  .clip-path-polygon {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 100px), 0 100%);
+  }
+}
