@@ -168,18 +168,18 @@ const Hero = () => {
       </div>
 
       {/* Stats Section */}
-      <section className="pt-4 pb-8 sm:pb-12 xl:pt-0 xl:pb-0 px-4 sm:px-0">
+      <section className="pt-4 pb-12 xl:pt-0 xl:pb-0">
         <div className="container mx-auto">
-          <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-4 sm:gap-6 max-w-[100vw] md:max-w-[80vw] mx-auto xl:max-w-none">
+          <div className="flex flex-wrap gap-6 max-w-[100vw] md:max-w-[80vw] mx-auto xl:max-w-none">
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="flex-1 flex gap-2 sm:gap-4 items-center justify-center xl:justify-start min-w-[140px]"
+                className="flex-1 flex gap-4 items-center justify-center xl:justify-start"
               >
-                <div className="flex items-center gap-2 sm:gap-4" style={{ opacity: 1 }}>
-                  <div className="flex items-center gap-2 sm:gap-4" style={{ filter: 'blur(0px)', opacity: 1 }}>
-                    <span className="text-2xl sm:text-4xl xl:text-6xl font-extrabold">{stat.value}</span>
-                    <p className="max-w-[100px] sm:max-w-[150px] leading-snug text-white/80 text-xs sm:text-sm md:text-base">{stat.label}</p>
+                <div className="flex items-center gap-4" style={{ opacity: 1 }}>
+                  <div className="flex items-center gap-4" style={{ filter: 'blur(0px)', opacity: 1 }}>
+                    <span className="text-4xl xl:text-6xl font-extrabold">{stat.value}</span>
+                    <p className="max-w-[150px] leading-snug text-white/80">{stat.label}</p>
                   </div>
                 </div>
               </div>

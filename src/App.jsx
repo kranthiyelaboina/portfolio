@@ -26,14 +26,14 @@ function Professional() {
       </div>
       
       {/* Gallery Section */}
-      <div id="gallery" className="py-12 sm:py-20 px-4 sm:px-0">
-        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center mb-3 sm:mb-4 text-white">
+      <div id="gallery" className="py-12 sm:py-20">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center mb-3 sm:mb-4 text-white px-4">
           Photo <span className="text-accent">Gallery</span>
         </h2>
-        <p className="text-neutral-400 text-center max-w-2xl mx-auto mb-6 sm:mb-10 text-sm sm:text-base">
+        <p className="text-neutral-400 text-center max-w-2xl mx-auto mb-6 sm:mb-10 text-sm sm:text-base px-4">
           Drag to explore • Click to enlarge
         </p>
-        <div className="w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px]">
+        <div className="w-full h-[500px] sm:h-[550px] md:h-[600px] lg:h-[700px]">
           <DomeGallery 
             fit={1}
             overlayBlurColor="#0a0a0f"
