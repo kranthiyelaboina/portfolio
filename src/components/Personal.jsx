@@ -468,9 +468,9 @@ const Personal = () => {
   const personalities = ['Curious', 'Passionate', 'Creative', 'Dedicated', 'Disciplined', 'Peaceful'];
 
   const mediaImages = [
-    '/personal/darksouls.webp',
+    '/src/assets/shadow.jpg',
     '/personal/interstellar.webp',
-    '/personal/norwegianwood.webp',
+    '/src/assets/witcher.jpg',
     '/personal/radiohead.webp',
     '/personal/steinsgate.webp',
   ];
@@ -498,7 +498,7 @@ const Personal = () => {
       category: 'Books', 
       title: 'Fiction Novels', 
       image: '/personal/kqo4dwwisjmqn6gmikmp.webp',
-      summary: 'I love reading so much that I read novels for about 20,000 hours. Currently I have a matcha kindle (absolutely the best thing ever ❤️) and read novels with it everyday. In 10th grade or 2020, when I wanted to start reading books, it coincided with the COVID period, so I couldn\'t buy books. At that time, it was possible to read novels on the computer, so I started reading intensively from this period. I read books for 3-10 hours every day, and haven\'t missed this trend until 2025. If I played video games for about 3,000 hours, I probably read novels for maybe 20,000 hours. My favorite book is Shadow Slave. It has over 2,000 chapters.'
+      summary: 'I love reading so much that I read novels for about 20,000 hours. Currently I have a matcha kindle (absolutely the best thing ever ❤️) and read novels with it everyday. In 10th grade or 2020, when I wanted to start reading books, it coincided with the COVID period, so I couldn\'t buy books. At that time, it was possible to read novels on the computer, so I started reading intensively from this period. I read books for 3-10 hours every day, and haven\'t missed this trend until 2025. Currently hooked on Shadow Slave and Lord of the Mysteries - absolutely captivated by the storytelling and intricate world-building. These novels have completely drawn me in with their compelling narratives and character development.'
     },
     { 
       category: 'Foreign Languages', 
