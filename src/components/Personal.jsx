@@ -5,6 +5,8 @@ import { HiArrowLeft, HiArrowRight, HiX } from 'react-icons/hi';
 import { World } from './ui/Globe';
 import { Cover } from './ui/Cover';
 import chessImg from '../assets/chess.png';
+import shadowImg from '../assets/shadow.jpg';
+import witcherImg from '../assets/witcher.jpg';
 
 // Spotlight effect component
 const Spotlight = () => {
@@ -468,9 +470,9 @@ const Personal = () => {
   const personalities = ['Curious', 'Passionate', 'Creative', 'Dedicated', 'Disciplined', 'Peaceful'];
 
   const mediaImages = [
-    '/src/assets/shadow.jpg',
+    shadowImg,
     '/personal/interstellar.webp',
-    '/src/assets/witcher.jpg',
+    witcherImg,
     '/personal/radiohead.webp',
     '/personal/steinsgate.webp',
   ];
