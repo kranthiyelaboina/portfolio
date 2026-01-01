@@ -510,11 +510,11 @@ const Personal = () => {
 
   const dailyRoutine = [
     { time: '6:00 AM', activity: 'Wake up' },
-    { time: '8:00 AM', activity: 'College' },
-    { time: '5:00 PM', activity: 'Coding' },
-    { time: '6:00 PM', activity: 'Read books' },
-    { time: '7:00 PM', activity: 'Singing & Music' },
-    { time: '10:00 PM', activity: 'Sleep' },
+    { time: '9:00 AM', activity: 'College' },
+    { time: '6:00 PM', activity: 'Coding' },
+    { time: '8:00 PM', activity: 'Read books' },
+    { time: '9:00 PM', activity: 'Music' },
+    { time: '10:30 PM', activity: 'Sleep' },
   ];
 
   const futurePlans = [
@@ -680,7 +680,7 @@ const Personal = () => {
             transition={{ duration: 0.5 }}
           >
             <h2 className="pl-4 mx-auto text-lg sm:text-xl md:text-3xl lg:text-5xl font-bold text-neutral-200">
-              Components of Bablu's Life
+              Components of My Life
             </h2>
             <Carousel items={carouselItems} />
           </motion.div>

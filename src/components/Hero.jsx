@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { SiCredly } from 'react-icons/si';
 import profileImage from '../assets/kranthi.png';
+import resumePdf from '../assets/RESUME.pdf';
 
 // Preload the profile image
 const preloadImage = (src) => {
@@ -30,7 +31,7 @@ const Hero = () => {
   }, []);
 
   const stats = [
-    { value: '21', label: 'Age' },
+    { value: '3x', label: 'Hackathon winner' },
     { value: '10+', label: 'Certifications' },
     { value: '15+', label: 'Projects worked on' },
     { value: '5', label: 'Projects Deployed' },
@@ -68,7 +69,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row xl:flex-row items-center gap-4 sm:gap-6 xl:gap-8">
               {/* Resume Button */}
               <a 
-                href="https://limewire.com/d/cFmt6#zSitlLNkJh"
+                href={resumePdf}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group h-[56px] px-8 border border-accent rounded-full flex items-center justify-center gap-2 text-accent text-sm font-semibold uppercase tracking-[2px] hover:bg-accent hover:text-primary transition-all duration-200"
