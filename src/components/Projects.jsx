@@ -1,8 +1,22 @@
 import { FaLocationArrow } from 'react-icons/fa';
+import { SiReact, SiVite, SiPython, SiFlask, SiAmazon, SiTensorflow } from 'react-icons/si';
 import vyomaImg from '../assets/vyoma.png';
 import resourcebaseImg from '../assets/resourcebase.png';
 import admissionImg from '../assets/admissionenquiry.jpeg';
 import trovoImg from '../assets/trovo.png';
+
+const getTechIcon = (tech) => {
+  const iconProps = { className: 'w-3 h-3 sm:w-4 sm:h-4' };
+  const techIconMap = {
+    'React': <SiReact {...iconProps} />,
+    'Vite': <SiVite {...iconProps} />,
+    'Python': <SiPython {...iconProps} />,
+    'Flask': <SiFlask {...iconProps} />,
+    'AWS': <SiAmazon {...iconProps} />,
+    'TensorFlow': <SiTensorflow {...iconProps} />,
+  };
+  return techIconMap[tech] || null;
+};
 
 const Projects = () => {
   const projects = [
@@ -88,15 +102,28 @@ const Projects = () => {
                     {/* Tech Stack and Link */}
                     <div className="flex items-center justify-between mt-4 sm:mt-7 mb-3">
                       <div className="flex items-center">
-                        {project.iconList.slice(0, 3).map((tech, idx) => (
-                          <div
-                            key={idx}
-                            className="border border-white/[.2] rounded-full bg-black w-7 h-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10 flex justify-center items-center text-[10px] sm:text-xs"
-                            style={{ transform: `translateX(${-idx * 5}px)` }}
-                          >
-                            {tech.slice(0, 2)}
-                          </div>
-                        ))}
+                        {project.iconList.slice(0, 3).map((tech, idx) => {
+                          const icon = getTechIcon(tech);
+                          return icon ? (
+                            <div
+                              key={idx}
+                              className="border border-white/[.2] rounded-full bg-black w-7 h-7 sm:w-8 sm:h-8 flex justify-center items-center hover:border-accent transition-all duration-200"
+                              style={{ transform: `translateX(-${idx * 5}px)` }}
+                              title={tech}
+                            >
+                              {icon}
+                            </div>
+                          ) : (
+                            <div
+                              key={idx}
+                              className="border border-white/[.2] rounded-full bg-black w-7 h-7 sm:w-8 sm:h-8 flex justify-center items-center text-[9px] sm:text-xs hover:border-accent transition-all duration-200"
+                              style={{ transform: `translateX(-${idx * 5}px)` }}
+                              title={tech}
+                            >
+                              {tech.slice(0, 2)}
+                            </div>
+                          );
+                        })}
                       </div>
                       {project.link !== '#' && (
                         <div className="flex justify-center items-center">
